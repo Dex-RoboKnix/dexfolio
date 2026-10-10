@@ -3,11 +3,11 @@ provenance: AAC
 layer: L2
 ---
 
-# Dex Folio
+# DexFolio
 
-Layer: **L2**, Dex Folio. Pre-1.0 prototype.
+Layer: **L2**, DexFolio. Pre-1.0 prototype.
 
-The Folio is a read-only, single-file HTML view of a `dex-vault`: notes, spine node map, story, actions, ledger, sources, timeline, decisions and health checks. This repo is the source of truth for its builders and template.
+A folio is a read-only, single-file HTML view of a `dex-vault`: notes, spine node map, story, actions, ledger, sources, timeline, decisions and health checks. This repo is the source of truth for its builders and template.
 
 ## What dex.md uses it for
 
