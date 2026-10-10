@@ -1,0 +1,9 @@
+{
+  "name": "dexfolio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "description": "Dex Folio (L2): read-only knowledge-base view of a dex-vault",
+  "scripts": { "test": "node --test test/*.test.js" }
+}
