@@ -5,7 +5,7 @@ layer: L2
 
 # DexFolio
 
-Layer: **L2**, DexFolio. Pre-1.0 prototype.
+Layer: **L2**, DexFolio. Pre-1.0 prototype. Part of DexRoboKnix: see the [sitemap](https://github.com/Dex-RoboKnix/Dex_RoboKnix/blob/main/SITEMAP.md).
 
 A folio is a read-only, single-file HTML view of a `dex-vault`: notes, spine node map, story, actions, ledger, sources, timeline, decisions and health checks. This repo is the source of truth for its builders and template.
 
@@ -57,4 +57,4 @@ Screenshots from an emulated test session on an illustrative project (a communit
 
 ## Licence
 
-OpenCore: Core edition AGPL-3.0; no Enterprise edition exists.
+OpenCore: this Core edition is AGPL-3.0 ([`LICENSE`](LICENSE)). No Enterprise edition exists.
