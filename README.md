@@ -5,7 +5,11 @@ layer: L2
 
 # DexFolio
 
-Layer: **L2**, DexFolio. Pre-1.0 prototype. Part of DexRoboKnix: see the [sitemap](https://github.com/Dex-RoboKnix/Dex_RoboKnix/blob/main/SITEMAP.md).
+DexFolio: turns a dex vault into one offline HTML Folio you can read anywhere.
+
+**Layer: L2** (a product that conforms to L1: knowledge capture, hosted by ShadowOS and installable on its own). Pre-1.0 prototype.
+**Licence:** AGPL-3.0-or-later, the open Core edition. Core never depends on Enterprise code; no Enterprise edition exists yet.
+**Part of:** DexRoboKnix · [DexSpine](https://github.com/Dex-RoboKnix/dexspine-core)
 
 A folio is a read-only, single-file HTML view of a `dex-vault`: notes, spine node map, story, actions, ledger, sources, timeline, decisions and health checks. This repo is the source of truth for its builders and template.
 
@@ -19,6 +23,8 @@ dex-md vendors the files in `src/` at a pinned dexfolio tag (see `RELEASE.md`) a
 node dex-vault/.dex/build_folio.mjs            # build dex-vault/dex-folio.html and take a snapshot
 node dex-vault/.dex/build_folio.mjs --changes  # list changes since the last snapshot
 ```
+The first command builds the folio and takes a snapshot; the second lists what changed since that snapshot.
+
 Python alternative: `build_folio.py` (same behaviour). Node 18+, no packages.
 
 Test: `npm test`.
