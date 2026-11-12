@@ -63,4 +63,4 @@ Screenshots from an emulated test session on an illustrative project (a communit
 
 ## Licence
 
-OpenCore: this Core edition is AGPL-3.0 ([`LICENSE`](LICENSE)). No Enterprise edition exists.
+OpenCore: this Core edition is AGPL-3.0-or-later ([`LICENSE`](LICENSE)). No Enterprise edition exists.
