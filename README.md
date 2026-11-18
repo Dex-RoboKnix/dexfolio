@@ -5,29 +5,38 @@ layer: L2
 
 # DexFolio
 
-DexFolio: turns a dex vault into one offline HTML Folio you can read anywhere.
+**Turns a Dex vault into one HTML page you can read anywhere: offline, in any browser, on a phone too.**
 
-**Layer: L2** (a product that conforms to L1: knowledge capture, hosted by ShadowOS and installable on its own). Pre-1.0 prototype.
-**Licence:** AGPL-3.0-or-later, the open Core edition. Core never depends on Enterprise code; no Enterprise edition exists yet.
-**Part of:** DexRoboKnix · [DexSpine](https://github.com/Dex-RoboKnix/dexspine-core)
+A Folio shows everything in a `dex-vault` at a glance: the spine node map (what is covered, what is weak), the notes, the story, the actions waiting, the claims ledger, the sources, a timeline, the decisions and a health check of the vault. It only reads; it never changes the vault.
 
-A folio is a read-only, single-file HTML view of a `dex-vault`: notes, spine node map, story, actions, ledger, sources, timeline, decisions and health checks. This repo is the source of truth for its builders and template.
+> **This repo is parked.** DexFolio is now the Folio that [dex.md](https://github.com/Dex-RoboKnix/dex-md) builds for every vault; its builders and template live in the dex-md repo (`engine/`). This repo keeps v0.1.0, where the Folio started. To get a Folio, use dex.md.
 
-## What dex.md uses it for
+**Layer: L2**, a product that follows the DexSpine standard (L1). Pre-1.0 · [AGPL-3.0-or-later](LICENSE)
 
-dex-md vendors the files in `src/` at a pinned dexfolio tag (see `RELEASE.md`) and installs them into `dex-vault/.dex/` at Stage 2. Vendored copies must be byte-identical to the tag.
+## Use it
 
-## Use
+In a folder with a `dex-vault/` that dex.md built:
 
-```
+```sh
 node dex-vault/.dex/build_folio.mjs            # build dex-vault/dex-folio.html and take a snapshot
-node dex-vault/.dex/build_folio.mjs --changes  # list changes since the last snapshot
+node dex-vault/.dex/build_folio.mjs --changes  # list what changed since the last snapshot
 ```
-The first command builds the folio and takes a snapshot; the second lists what changed since that snapshot.
+Readable: the first builds the page and remembers the state of the vault; the second lists what changed since then, without building.
 
-Python alternative: `build_folio.py` (same behaviour). Node 18+, no packages.
+Node 18 or later, no packages. `build_folio.py` does the same with Python. Open `dex-vault/dex-folio.html` in any browser; **Link folder** gives a live view.
 
-Test: `npm test`.
+## Where the Folio lives now
+
+dex.md installs the Folio builders and template into `dex-vault/.dex/` at Stage 2 and rebuilds the page at every checkpoint. They started from this repo at [v0.1.0](RELEASE.md) and have moved on in dex-md: dex.md 0.12.0 adds a plain view, every note also written as static HTML for phones and file previews that never run scripts. Changes to the Folio are made there, not here.
+
+## Which document do I read?
+
+| You are | Read |
+|---|---|
+| A person who wants a Folio | [dex.md](https://github.com/Dex-RoboKnix/dex-md): it builds one for you. Then open `dex-vault/dex-folio.html` |
+| A person who wants to change the Folio | The dex-md repo, `engine/build/src/` |
+| A person who wants to know what each view shows | [`docs/folio.md`](docs/folio.md) |
+| An agent or person working on this repo | [`START.md`](START.md), then `CLAUDE.md` |
 
 ## What using a folio looks like
 
@@ -63,4 +72,9 @@ Screenshots from an emulated test session on an illustrative project (a communit
 
 ## Licence
 
-OpenCore: this Core edition is AGPL-3.0-or-later ([`LICENSE`](LICENSE)). No Enterprise edition exists.
+AGPL-3.0-or-later, the open Core edition. No Enterprise edition exists.
+
+## Related
+
+- [dex-md](https://github.com/Dex-RoboKnix/dex-md): dex.md, the way in. One file that builds a DexSpine vault in any project folder.
+- [dexspine-core](https://github.com/Dex-RoboKnix/dexspine-core): the DexSpine standard and the DEX838 parser.
